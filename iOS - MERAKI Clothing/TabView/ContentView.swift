@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var cartManager = CartManager()
     @State var currentTab: Tab = .Home
-    
     init() {
         UITabBar.appearance().isHidden = true
     }
@@ -86,6 +86,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
             static var previews: some View {
                 ContentView()
+                    .environmentObject(CartManager())
+                
             }
         }
         
