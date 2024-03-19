@@ -20,6 +20,7 @@
 		8291744F2BA6F76100954293 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8291744E2BA6F76100954293 /* ProductCardView.swift */; };
 		829174512BA6F78400954293 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174502BA6F78400954293 /* Search.swift */; };
 		829174532BA6FC7600954293 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174522BA6FC7600954293 /* Cart.swift */; };
+		829174552BA9C32A00954293 /* cartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174542BA9C32A00954293 /* cartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8291744E2BA6F76100954293 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		829174502BA6F78400954293 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		829174522BA6FC7600954293 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		829174542BA9C32A00954293 /* cartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				8291744E2BA6F76100954293 /* ProductCardView.swift */,
+				829174542BA9C32A00954293 /* cartButton.swift */,
 				829174262B9F774900954293 /* ContentView.swift */,
 				8291743D2BA0DCCE00954293 /* HomeView.swift */,
 				8291743F2BA0DD3D00954293 /* CategoryView.swift */,
@@ -197,6 +200,7 @@
 				829174442BA0DD5400954293 /* ProfileView.swift in Sources */,
 				8291744F2BA6F76100954293 /* ProductCardView.swift in Sources */,
 				829174512BA6F78400954293 /* Search.swift in Sources */,
+				829174552BA9C32A00954293 /* cartButton.swift in Sources */,
 				829174402BA0DD3D00954293 /* CategoryView.swift in Sources */,
 				8291744A2BA5360A00954293 /* Product.swift in Sources */,
 			);
