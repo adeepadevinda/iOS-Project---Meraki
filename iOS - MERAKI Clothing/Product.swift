@@ -16,7 +16,7 @@ struct Product : Identifiable {
     var price : Int
 }
 
-var ProductList = [
+var productList = [
     Product(name: "White Oversized T-shirt",
             image: "ladies_tshirt_white",
             description: " ",

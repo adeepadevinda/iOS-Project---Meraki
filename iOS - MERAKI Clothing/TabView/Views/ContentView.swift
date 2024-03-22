@@ -18,18 +18,19 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $currentTab){
             
-            Text("Home View")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background()
-                .tag(Tab.Home)
+            HomeView()
+            
             Text("Category View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()
                 .tag(Tab.Category)
+            
             Text("Cart View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()
                 .tag(Tab.Cart)
+            
+            
             Text("Profile View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()

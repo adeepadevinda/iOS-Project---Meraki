@@ -12,7 +12,7 @@ struct ProductCardView: View {
     var product : Product
     var body: some View {
         ZStack{
-            Color("Secondary")
+            Color("Grey")
             
             ZStack(alignment: .bottomTrailing){
                 VStack(alignment: .leading){
@@ -23,6 +23,7 @@ struct ProductCardView: View {
                     
                     Text(product.name)
                         .font(.headline)
+                        .foregroundColor(.black)
                         .padding(.vertical, 1)
                     
                     Text(product.supplier)
@@ -30,7 +31,8 @@ struct ProductCardView: View {
                         .font(.caption)
                         .padding(.vertical, 0.5)
                     
-                    Text("$ \(product.price)")
+                    Text("LKR \(product.price)")
+                        .foregroundColor(.black)
                         .bold()
                     
                     
@@ -54,7 +56,7 @@ struct ProductCardView: View {
 
 struct ProductCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCardView(product : ProductList[0])
+        ProductCardView(product : productList[0])
             .environmentObject(CartManager())
     }
 }
