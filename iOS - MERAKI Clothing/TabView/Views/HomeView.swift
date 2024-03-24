@@ -19,8 +19,7 @@ struct HomeView: View {
                   AppBar()
                     Search()
                     ImageSliderView()
-                    
-                    
+
                     HStack{
                         Text("New Arrivals")
                             .font(.title2)
@@ -71,30 +70,40 @@ struct AppBar: View {
                 HStack{
                     Image(systemName: "location.north.fill")
                         .resizable()
-                        .frame(width: 20, height: 20)
-                        .padding(.trailing)
+                        .frame(width: 10, height: 10)
+                        .padding(.horizontal)
                     
                     Text("Colombo, Sri Lanka")
-                        .font(.title2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
+                       
                     
                     Spacer()
                     NavigationLink(destination: CartView()
                         .environmentObject(cartManager)){
                         cartButton(numberofProducts: cartManager.products.count)
+                                .padding(.horizontal)
                     }
                 }
-                Text("Crafted with Soul, \nWorn in")
-                    .font(.largeTitle)
-                    .foregroundColor(.gray)
-                    .bold()
+                VStack{Text("    Crafted with Soul,")
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                        .bold()
+                    Text("Worn in")
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                        .bold()
+                    
+                     + Text(" Passion")
+                        .foregroundColor((Color("Primary")))
+                        .font(.title2)
+                        .fontWeight(.bold)
+                }
+                .padding(.horizontal)
+                .padding(.horizontal)
                 
-                + Text(" Passion")
-                    .font(.largeTitle.bold())
-                    .foregroundColor((Color("Primary")))
             }
         }
-        .padding()
+       
         .environmentObject(CartManager())
     }
 }

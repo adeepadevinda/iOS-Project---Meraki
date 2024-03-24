@@ -17,39 +17,37 @@ struct ContentView: View {
     @Namespace var animation
     var body: some View {
         TabView(selection: $currentTab){
-            
-            HomeView()
-            
-            Text("Category View")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background()
-                .tag(Tab.Category)
-            
-            Text("Cart View")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background()
-                .tag(Tab.Cart)
-            
-            
-            Text("Profile View")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background()
-                .tag(Tab.Profile)
-        }
-        .overlay(
-            HStack(spacing: 0){
-                ForEach(Tab.allCases, id: \.rawValue){
-                    tab in
-                    TabButton(tab: tab)
-                }
-                .padding(.vertical)
-                .padding(.bottom, getSafeArea().bottom == 0 ? 5 : (getSafeArea().bottom - 15))
-                .background(Color("Secondary"))
+                HomeView()
+                
+                Text("Category View")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background()
+                    .tag(Tab.Category)
+                
+                Text("Cart View")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background()
+                    .tag(Tab.Cart)
+                
+                Text("Profile View")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background()
+                    .tag(Tab.Profile)
             }
-        ,
-            alignment: .bottom
-        ).ignoresSafeArea(.all, edges: .bottom)
-    }
+            .overlay(
+                HStack(spacing: 0){
+                    ForEach(Tab.allCases, id: \.rawValue){
+                        tab in
+                        TabButton(tab: tab)
+                    }
+                    .padding(.vertical)
+                    .padding(.bottom, getSafeArea().bottom == 0 ? 5 : (getSafeArea().bottom - 15))
+                    .background(Color("Secondary"))
+                }
+                ,
+                alignment: .bottom
+            ).ignoresSafeArea(.all, edges: .bottom)
+        }
     
     func TabButton(tab: Tab) -> some View {
         GeometryReader{proxy in
