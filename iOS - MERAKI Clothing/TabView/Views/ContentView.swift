@@ -19,10 +19,7 @@ struct ContentView: View {
         TabView(selection: $currentTab){
                 HomeView()
                 
-                Text("Category View")
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background()
-                    .tag(Tab.Category)
+                ProductsView()
                 
                 Text("Cart View")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -20,6 +20,7 @@ struct ProductDetailsView: View {
                             .resizable()
                             .ignoresSafeArea(edges: .top)
                             .frame(height: 300)
+                            .cornerRadius(15)
                         
                         Image(systemName: "heart.fill")
                             .resizable()
@@ -57,11 +58,34 @@ struct ProductDetailsView: View {
                         Text("Description")
                             .font(.title3)
                             .fontWeight(.medium)
+                        
+                        Text(product.description)
+                        Spacer()
+                        HStack(alignment: .top){
+                            VStack(alignment: .leading){
+                                Text("Size")
+                                    .font(.system(size: 18))
+                                HStack{
+                                    Image(systemName: "s.circle")
+                                        .resizable()
+                                        .frame(width: 25, height: 25)
+                                    
+                                    Image(systemName: "m.circle")
+                                        .resizable()
+                                        .frame(width: 25, height: 25)
+                                    
+                                    Image(systemName: "l.circle")
+                                        .resizable()
+                                        .frame(width: 25, height: 25)
+                                    
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
-        .ignoresSafeArea(edges: .top)
+        .padding(.horizontal)
     }
 }
 
