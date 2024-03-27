@@ -10,6 +10,7 @@ import SwiftUI
 struct ImageSliderView: View {
     @State private var currentIndex = 0
     var slides: [String] = ["slider00","slider01","slider02"]
+    
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             ZStack(alignment: .trailing){
@@ -20,7 +21,7 @@ struct ImageSliderView: View {
                     .cornerRadius(15)
             }
             HStack{
-                ForEach(0..<slides.count){index in 
+                ForEach(slides.indices, id: \.self) { index in
                     Circle()
                         .fill(self.currentIndex == index ? Color("Primary") : Color("Secondary"))
                         .frame(width: 10, height: 10)
@@ -29,11 +30,11 @@ struct ImageSliderView: View {
             .padding()
         }
         .padding()
-        .onAppear{
-            Timer.scheduledTimer(withTimeInterval: 5, repeats: true){timer in
-                if self.currentIndex + 1 == self.slides.count{
+        .onAppear {
+            Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { timer in
+                if self.currentIndex + 1 == self.slides.count {
                     self.currentIndex = 0
-                }else{
+                } else {
                     self.currentIndex += 1
                 }
             }

@@ -21,7 +21,6 @@ struct PaymentButton_Previews: PreviewProvider {
             .frame(minWidth: 100, maxHeight: 400)
             .frame(height: 45)
             .frame(maxWidth: .infinity)
-           
     }
 }
 extension PaymentButton{
@@ -47,7 +46,6 @@ extension PaymentButton{
             super.init()
             
             button.addTarget(self, action: #selector(callback(_:)), for: .touchUpInside)
-            
         }
         @objc
         func callback(_ sender: Any) {

@@ -44,7 +44,7 @@ struct HomeView: View {
                                 Text(product.name)
                             } label: {
                                 ProductCardView(product: product)
-                                    .environmentObject(cartManager)
+                                    .environmentObject(CartManager())
                             }
                             }
                         }
@@ -56,7 +56,7 @@ struct HomeView: View {
             }
            
         }
-        .environmentObject(cartManager)
+        .environmentObject(CartManager())
     }
 }
 
