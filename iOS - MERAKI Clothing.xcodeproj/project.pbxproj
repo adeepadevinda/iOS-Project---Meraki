@@ -105,7 +105,7 @@
 				829174542BA9C32A00954293 /* cartButton.swift */,
 				829174562BA9C58000954293 /* Views */,
 				8291743F2BA0DD3D00954293 /* CategoryView.swift */,
-				829174432BA0DD5400954293 /* ProfileView.swift */,
+				829174732BB015B400954293 /* PaymentButton.swift */,
 				829174452BA0FC0F00954293 /* Models */,
 				829174752BB0342200954293 /* ProductDetailsView.swift */,
 			);
@@ -136,7 +136,7 @@
 				829174772BB1B16F00954293 /* ProductsView.swift */,
 				8291743D2BA0DCCE00954293 /* HomeView.swift */,
 				829174572BADC0A700954293 /* CartView.swift */,
-				829174732BB015B400954293 /* PaymentButton.swift */,
+				829174432BA0DD5400954293 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
