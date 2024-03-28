@@ -22,12 +22,14 @@ struct ContentView: View {
                 .tabItem{
                     Label("Cart", systemImage: "cart.fill")
                 }
-            ProfileView()
+            ProfileOrders()
                 .tabItem{
                     Label("Profile", systemImage: "person.fill")
                 }
         }
         .environmentObject(CartManager())
+        .navigationBarBackButtonHidden()
+        .ignoresSafeArea()
     }
 }
 

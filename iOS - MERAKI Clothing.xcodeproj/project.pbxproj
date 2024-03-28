@@ -25,6 +25,11 @@
 		829174742BB015B400954293 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174732BB015B400954293 /* PaymentButton.swift */; };
 		829174762BB0342200954293 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174752BB0342200954293 /* ProductDetailsView.swift */; };
 		829174782BB1B16F00954293 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174772BB1B16F00954293 /* ProductsView.swift */; };
+		8291747B2BB596B700954293 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8291747A2BB596B700954293 /* FirebaseAuth */; };
+		8291747D2BB596B700954293 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8291747C2BB596B700954293 /* FirebaseFirestore */; };
+		8291747F2BB597FF00954293 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8291747E2BB597FF00954293 /* GoogleService-Info.plist */; };
+		829174812BB5A67100954293 /* ProfileOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174802BB5A67100954293 /* ProfileOrders.swift */; };
+		829174832BB5A6C000954293 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174822BB5A6C000954293 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +52,9 @@
 		829174732BB015B400954293 /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
 		829174752BB0342200954293 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
 		829174772BB1B16F00954293 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		8291747E2BB597FF00954293 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		829174802BB5A67100954293 /* ProfileOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOrders.swift; sourceTree = "<group>"; };
+		829174822BB5A6C000954293 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8291747B2BB596B700954293 /* FirebaseAuth in Frameworks */,
+				8291747D2BB596B700954293 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +135,7 @@
 				8291744C2BA564D000954293 /* ImageSliderView.swift */,
 				829174502BA6F78400954293 /* Search.swift */,
 				829174522BA6FC7600954293 /* Cart.swift */,
+				8291747E2BB597FF00954293 /* GoogleService-Info.plist */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -137,6 +148,8 @@
 				8291743D2BA0DCCE00954293 /* HomeView.swift */,
 				829174572BADC0A700954293 /* CartView.swift */,
 				829174432BA0DD5400954293 /* ProfileView.swift */,
+				829174822BB5A6C000954293 /* SignInView.swift */,
+				829174802BB5A67100954293 /* ProfileOrders.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +170,10 @@
 			dependencies = (
 			);
 			name = "iOS - MERAKI Clothing";
+			packageProductDependencies = (
+				8291747A2BB596B700954293 /* FirebaseAuth */,
+				8291747C2BB596B700954293 /* FirebaseFirestore */,
+			);
 			productName = "iOS - MERAKI Clothing";
 			productReference = 829174212B9F774900954293 /* iOS - MERAKI Clothing.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +202,9 @@
 				Base,
 			);
 			mainGroup = 829174182B9F774900954293;
+			packageReferences = (
+				829174792BB596B700954293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 829174222B9F774900954293 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,6 +221,7 @@
 			files = (
 				8291742C2B9F774C00954293 /* Preview Assets.xcassets in Resources */,
 				829174292B9F774C00954293 /* Assets.xcassets in Resources */,
+				8291747F2BB597FF00954293 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,12 +232,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829174832BB5A6C000954293 /* SignInView.swift in Sources */,
 				829174422BA0DD4A00954293 /* CartProductView.swift in Sources */,
 				8291744D2BA564D000954293 /* ImageSliderView.swift in Sources */,
 				829174582BADC0A700954293 /* CartView.swift in Sources */,
 				829174272B9F774900954293 /* ContentView.swift in Sources */,
 				8291743E2BA0DCCE00954293 /* HomeView.swift in Sources */,
 				829174532BA6FC7600954293 /* Cart.swift in Sources */,
+				829174812BB5A67100954293 /* ProfileOrders.swift in Sources */,
 				829174252B9F774900954293 /* iOS___MERAKI_ClothingApp.swift in Sources */,
 				829174442BA0DD5400954293 /* ProfileView.swift in Sources */,
 				8291744F2BA6F76100954293 /* ProductCardView.swift in Sources */,
@@ -425,6 +448,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		829174792BB596B700954293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8291747A2BB596B700954293 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 829174792BB596B700954293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8291747C2BB596B700954293 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 829174792BB596B700954293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 829174192B9F774900954293 /* Project object */;
 }
