@@ -16,10 +16,10 @@ struct Product : Identifiable {
     var price : Int
 }
 
-var ProductList = [
+var productList = [
     Product(name: "White Oversized T-shirt",
             image: "ladies_tshirt_white",
-            description: " ",
+            description: "Effortlessly chic, our white oversized t-shirt is the epitome of comfort meets style. Crafted from soft, breathable fabric, it offers a relaxed fit for easy everyday wear. Perfect for layering or as a standalone statement piece.",
             supplier: "ZigZag",
             price: 2890),
     Product(name: "Navy Oversized T-shirt",
@@ -39,7 +39,7 @@ var ProductList = [
             price: 7990),
     Product(name: "Puffed Sleeve Mini Linen Dress",
             image: "dress02",
-            description: " ",
+            description: "Embrace timeless elegance with our puffed sleeve mini linen dress. Crafted from breathable linen fabric, its flattering silhouette is complemented by charming puffed sleeves, adding a touch of sophistication to your summer wardrobe. Whether you're strolling through the city streets or enjoying a seaside getaway, this dress is sure to make a statement.",
             supplier: "ZigZag",
             price: 4990),
     Product(name: "Two Tone Scuba Printed Dress",

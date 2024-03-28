@@ -1,4 +1,5 @@
 import SwiftUI
+import FirebaseCore
 
 // Define your ContentView here or import it if it's already defined in another file
 
@@ -9,9 +10,13 @@ import SwiftUI
 
 @main
 struct YourAppNameApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProfileView()
         }
     }
 }
