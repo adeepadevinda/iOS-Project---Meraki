@@ -20,7 +20,7 @@ struct Search: View {
             .background(Color("Grey"))
             .cornerRadius(12)
             
-            Image(systemName: "camera")
+        
                 
                 .foregroundColor(.black)
                 .cornerRadius(12)
