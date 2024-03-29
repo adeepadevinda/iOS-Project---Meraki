@@ -7,73 +7,93 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationView { // Embed the content in a NavigationView
-            VStack {
-                Text("Sign In")
-                    .fontWeight(.medium)
-                    .font(.title)
-                
-                TextField(" Email", text: $email)
-                    .foregroundColor(.black)
-                    .textFieldStyle(.plain)
-                    .placeholder(when: email.isEmpty) {
-                        Text("Email")
-                            .foregroundColor(.white)
-                            .bold()
-                            .padding(.leading)
-                    }
-                
-                Rectangle()
-                    .frame(width: 350, height: 1)
-                    .foregroundColor(.black)
-                    .padding(.bottom)
-                
-                SecureField(" Password", text: $password)
-                    .textFieldStyle(.plain)
-                    .foregroundColor(.black)
-                    .placeholder(when: email.isEmpty) {
-                        Text("Password")
-                            .foregroundColor(.white)
-                            .bold()
-                            .padding(.leading)
-                    }
-                
-                Rectangle()
-                    .frame(width: 350, height: 1)
-                    .foregroundColor(.black)
-                    .padding(.bottom)
-                
-                NavigationLink(destination: ContentView(), isActive: $isSignUpActive) {
-                    Button(action: {
-                        // Action to perform when Sign In button is clicked
-                        isSignUpActive = true // Activate the navigation
-                    }) {
-                        Text("Sign In")
-                            .bold()
-                            .frame(width: 200, height: 40)
-                            .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .fill(
-                                    LinearGradient(
-                                        gradient: Gradient(colors: [.blue]),
-                                        startPoint: .top,
-                                        endPoint: .bottomTrailing
+            ZStack {
+                Image("background")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
+                    .opacity(0.5)
+                VStack {
+                    Image("Meraki__1_-removebg-preview")
+                        .resizable()
+                        .frame(width: 200, height: 150)
+                        .padding(.horizontal)
+                        .padding(.vertical)
+                    Text("Sign In")
+                        .fontWeight(.medium)
+                        .font(.title)
+                        .padding(.bottom)
+                        .padding(.bottom)
+                        .padding(.bottom)
+                        .padding(.bottom)
+                        .padding(.bottom)
+                 
+                    
+                    TextField(" Email", text: $email)
+                        .foregroundColor(.black)
+                        .textFieldStyle(.plain)
+                        .placeholder(when: email.isEmpty) {
+                            Text("Email")
+                                .foregroundColor(.white)
+                                .bold()
+                                .padding(.leading)
+                        }
+                    
+                    Rectangle()
+                        .frame(width: 350, height: 1)
+                        .foregroundColor(.black)
+                        .padding(.bottom)
+                    
+                    SecureField(" Password", text: $password)
+                        .textFieldStyle(.plain)
+                        .foregroundColor(.black)
+                        .placeholder(when: email.isEmpty) {
+                            Text("Password")
+                                .foregroundColor(.white)
+                                .bold()
+                                .padding(.leading)
+                        }
+                    
+                    Rectangle()
+                        .frame(width: 350, height: 1)
+                        .foregroundColor(.black)
+                        .padding(.bottom)
+                    
+                    NavigationLink(destination: ContentView(), isActive: $isSignUpActive) {
+                        Button(action: {
+                            // Action to perform when Sign In button is clicked
+                            isSignUpActive = true // Activate the navigation
+                        }) {
+                            
+                            Text("Sign In")
+                                .bold()
+                                .frame(width: 200, height: 40)
+                                .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .fill(
+                                        LinearGradient(
+                                            gradient: Gradient(colors: [.blue]),
+                                            startPoint: .top,
+                                            endPoint: .bottomTrailing
+                                        )
                                     )
                                 )
-                            )
-                            .foregroundColor(.white)
+                                .foregroundColor(.white)
+                        }
+                        
                     }
+                    .padding(.bottom) // Add some bottom padding
+                    
+                    NavigationLink( // New NavigationLink for signing in
+                        destination: SignInView(), // Navigate to SignInView when "Don't have an account yet? Sign Up" button is clicked
+                        label: {
+                            Text("Don't have an account yet? Sign Up")
+                                .foregroundColor(.black)
+                                .bold()
+                        }
+                    )
                 }
-                .padding(.bottom) // Add some bottom padding
-                
-                NavigationLink( // New NavigationLink for signing in
-                    destination: SignInView(), // Navigate to SignInView when "Don't have an account yet? Sign Up" button is clicked
-                    label: {
-                        Text("Don't have an account yet? Sign Up")
-                            .foregroundColor(.black)
-                            .bold()
-                    }
-                )
-            }
-            .padding() // Add padding to the VStack
+                .padding()
+            } // Add padding to the VStack
         }
     }
 }

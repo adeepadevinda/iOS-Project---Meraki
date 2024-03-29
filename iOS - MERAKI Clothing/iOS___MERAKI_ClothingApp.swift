@@ -1,19 +1,12 @@
 import SwiftUI
-import FirebaseCore
-
-// Define your ContentView here or import it if it's already defined in another file
-
-    var body: some View {
-        Text("Hello, World!")
-    }
-
+import Firebase
 
 @main
-struct YourAppNameApp: App {
-    
+struct FirebaseTutorialApp: App {
     init() {
         FirebaseApp.configure()
     }
+    
     var body: some Scene {
         WindowGroup {
             ProfileView()

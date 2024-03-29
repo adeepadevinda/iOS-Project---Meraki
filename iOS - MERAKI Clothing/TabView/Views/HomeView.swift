@@ -74,15 +74,26 @@ struct AppBar: View {
         NavigationStack {
             VStack (alignment: .leading){
                 HStack{
-                    Image(systemName: "location.north.fill")
+                    Image("Meraki__1_-removebg-preview")
                         .resizable()
-                        .frame(width: 10, height: 10)
+                        .frame(width: 100, height: 80)
                         .padding(.horizontal)
-                    
-                    Text("Colombo, Sri Lanka")
-                        .foregroundColor(.black)
-                       
-                    
+                                    
+                    VStack{
+                        Text("Crafted with Soul,")
+                            .font(.title2)
+                            .foregroundColor(.gray)
+                            .bold()
+                        Text("Worn in")
+                            .font(.title2)
+                            .foregroundColor(.gray)
+                            .bold()
+                        
+                        + Text(" Passion")
+                            .foregroundColor((Color("Primary")))
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
                     Spacer()
                     NavigationLink(destination: CartView()
                         .environmentObject(cartManager)){
@@ -90,20 +101,9 @@ struct AppBar: View {
                                 .padding(.horizontal)
                     }
                 }
-                VStack{Text("    Crafted with Soul,")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                        .bold()
-                    Text("Worn in")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                        .bold()
-                    
-                     + Text(" Passion")
-                        .foregroundColor((Color("Primary")))
-                        .font(.title2)
-                        .fontWeight(.bold)
+                VStack{
                 }
+               
                 .padding(.horizontal)
                 .padding(.horizontal)
                 
