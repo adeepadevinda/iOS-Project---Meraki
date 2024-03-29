@@ -19,7 +19,7 @@ struct ProductsView: View {
                                 .environmentObject(CartManager())
                         }
                     }
-                                       }
+                }
                     .padding()
                 }
             }

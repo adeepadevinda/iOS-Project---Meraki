@@ -71,8 +71,8 @@ struct ProductDetailsView: View {
                     
                         ZStack {
                             Rectangle()
-                                .fill(Color.black.opacity(0.1)) // Low opacity black color
-                                .cornerRadius(8) // Adjust corner radius as needed
+                                .fill(Color.black.opacity(0.1))
+                                .cornerRadius(8)
                               
 
                             HStack {
@@ -85,12 +85,14 @@ struct ProductDetailsView: View {
                                 
                                 Button(action: {
                                     cartManager.addtoCart(product: product)
-                                }) {
+                                }
+                                
+                                ) {
                                     Image(systemName: "plus.circle.fill")
                                         .resizable()
                                         .foregroundColor(Color.gray)
                                         .frame(width: 35, height: 35)
-                                        .padding(.trailing, 10) // Adjust trailing padding as needed
+                                        .padding(.trailing, 10)
                                 }
                             }
                         }
@@ -132,6 +134,7 @@ struct ProductDetailsView: View {
                     .frame(maxWidth: .infinity, maxHeight: 35)
             }
         }
+       
     }
 }
 
@@ -150,9 +153,9 @@ struct AppBarDetails: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Browse")
+                Text("Product Details")
                     .padding()
-                    .font(.title)
+                    .font(.title2)
                     .fontWeight(.medium)
                 
                 Spacer()
