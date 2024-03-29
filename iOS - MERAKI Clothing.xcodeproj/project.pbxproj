@@ -110,14 +110,14 @@
 		829174322BA0CC7F00954293 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				8291744E2BA6F76100954293 /* ProductCardView.swift */,
 				829174412BA0DD4A00954293 /* CartProductView.swift */,
+				829174732BB015B400954293 /* PaymentButton.swift */,
+				8291744E2BA6F76100954293 /* ProductCardView.swift */,
+				829174752BB0342200954293 /* ProductDetailsView.swift */,
 				829174542BA9C32A00954293 /* cartButton.swift */,
 				829174562BA9C58000954293 /* Views */,
 				8291743F2BA0DD3D00954293 /* CategoryView.swift */,
-				829174732BB015B400954293 /* PaymentButton.swift */,
 				829174452BA0FC0F00954293 /* Models */,
-				829174752BB0342200954293 /* ProductDetailsView.swift */,
 			);
 			path = TabView;
 			sourceTree = "<group>";

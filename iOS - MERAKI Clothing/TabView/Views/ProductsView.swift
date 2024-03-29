@@ -6,25 +6,33 @@ struct ProductsView: View {
     var column = [GridItem(.adaptive(minimum: 160), spacing: 10)]
     
     var body: some View {
-        VStack(spacing: 0) { // Set spacing to 0
+        VStack(spacing: 0) {
             AppBarProduct()
-            
+         
             ScrollView {
                 LazyVGrid(columns: column, spacing: 10) {
                     ForEach(productList, id: \.id) { product in
-                        ProductCardView(product: product)
+                        NavigationLink{
+                            ProductDetailsView(product: product)
+                        } label : {
+                            ProductCardView(product: product)
+                                .environmentObject(CartManager())
+                        }
                     }
+                                       }
                     .padding()
                 }
             }
-        }
+        
     }
 }
 
 struct ProductsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductsView()
-            .environmentObject(CartManager())
+        NavigationView{
+            ProductsView()
+                .environmentObject(CartManager())
+        }
     }
 }
 
