@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
     var body: some View {
@@ -27,9 +28,10 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person.fill")
                 }
         }
+        
         .environmentObject(CartManager())
         .navigationBarBackButtonHidden()
-        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

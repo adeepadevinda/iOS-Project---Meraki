@@ -34,19 +34,20 @@ struct ProductCardView: View {
                     Text("LKR \(product.price)")
                         .foregroundColor(.black)
                         .bold()
+                        .font(.title2)
                     
                     
                 }
                 
-                Button{
-                    cartManager.addtoCart(product: product)
-                } label:{
-                    Image(systemName: "plus.circle.fill")
-                        .resizable()
-                        .foregroundColor(Color("Primary"))
-                        .frame(width: 35, height: 35)
-                        .padding(.trailing)
-                }
+//                Button{
+//                    cartManager.addtoCart(product: product)
+//                } label:{
+//                    Image(systemName: "plus.circle.fill")
+//                        .resizable()
+//                        .foregroundColor(Color("Primary"))
+//                        .frame(width: 35, height: 35)
+//                        .padding(.trailing)
+//                }
             }
         }
         .frame(width: 185, height: 260)

@@ -41,7 +41,7 @@ struct HomeView: View {
                         HStack(spacing:10){
                             ForEach(productList, id: \.id){product in
                             NavigationLink{
-                                Text(product.name)
+                                ProductDetailsView(product: product)
                             } label: {
                                 ProductCardView(product: product)
                                     .environmentObject(CartManager())

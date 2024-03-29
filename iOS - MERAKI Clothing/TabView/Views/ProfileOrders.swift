@@ -9,7 +9,22 @@ import SwiftUI
 
 struct ProfileOrders: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("Order History")
+                    .font(.title)
+                    .bold()
+                    .padding()
+                
+                // Display order history here
+                List {
+                    ForEach(1..<6) { index in
+                        Text("Order \(index)")
+                    }
+                }
+            }
+            .navigationBarTitle("Profile", displayMode: .inline)
+        }
     }
 }
 
@@ -18,3 +33,4 @@ struct ProfileOrders_Previews: PreviewProvider {
         ProfileOrders()
     }
 }
+
