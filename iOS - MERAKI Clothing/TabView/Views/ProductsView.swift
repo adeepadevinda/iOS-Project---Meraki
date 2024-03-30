@@ -12,18 +12,17 @@ struct ProductsView: View {
             ScrollView {
                 LazyVGrid(columns: column, spacing: 10) {
                     ForEach(productList, id: \.id) { product in
-                        NavigationLink{
-                            ProductDetailsView(product: product)
-                        } label : {
+                        NavigationLink(destination: ProductDetailsView(product: product)) {
                             ProductCardView(product: product)
-                                .environmentObject(CartManager())
                         }
+                        .environmentObject(cartManager)
                     }
                 }
-                    .padding()
-                }
+                .padding()
             }
-        
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 

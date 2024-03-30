@@ -79,14 +79,12 @@ struct ProductDetailsView: View {
                                 Text("Add to Cart")
                                     .foregroundColor(.black)
                                     .font(.headline)
-                                    
-                                
+
                                 Spacer()
                                 
                                 Button(action: {
                                     cartManager.addtoCart(product: product)
                                 }
-                                
                                 ) {
                                     Image(systemName: "plus.circle.fill")
                                         .resizable()
@@ -96,11 +94,7 @@ struct ProductDetailsView: View {
                                 }
                             }
                         }
-
-
                     }
-                  
-                    
                     Text("Description")
                         .font(.title3)
                         .fontWeight(.medium)
@@ -134,7 +128,6 @@ struct ProductDetailsView: View {
                     .frame(maxWidth: .infinity, maxHeight: 35)
             }
         }
-       
     }
 }
 

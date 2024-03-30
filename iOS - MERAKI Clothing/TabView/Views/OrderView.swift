@@ -1,41 +1,38 @@
 //
-//  ProfileOrders.swift
+//  OrderView.swift
 //  iOS - MERAKI Clothing
 //
-//  Created by Adeepa on 2024-03-28.
+//  Created by Adeepa on 2024-03-30.
 //
 
 import SwiftUI
 
-struct ProfileOrders: View {
-    let players = [
+struct OrderView: View {
+    let order1 = [
         "Order Details",
         "My Profile",
         "Favorites",
         "Settings",
         "Sign Out",
     ]
-
     var body: some View {
         NavigationStack {
-            List(players, id: \.self) { player in
-                NavigationLink(destination: destinationView(for: player)) {
-                    Text(player)
+            List(order1, id: \.self) { order1 in
+                NavigationLink(destination: ordernameView(for: order1)) {
+                    Text(order1)
                 }
             }
             .navigationTitle("Profile")
         }
     }
-    
-    // Function to determine destination view based on the selected player
-    func destinationView(for player: String) -> some View {
-        switch player {
+    func ordernameView(for order1: String) -> some View {
+        switch order1 {
         case "Order Details":
             return AnyView(OrderView())
         case "My Profile":
             return AnyView(ProfileView())
         case "Favorites":
-            return AnyView(HomeView())
+            return AnyView(CartView())
         case "Settings":
             return AnyView(SettingsView())
         case "Sign Out":
@@ -46,10 +43,8 @@ struct ProfileOrders: View {
     }
 }
 
-struct ProfileOrders_Previews: PreviewProvider {
+struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileOrders()
+        OrderView()
     }
 }
-
-
