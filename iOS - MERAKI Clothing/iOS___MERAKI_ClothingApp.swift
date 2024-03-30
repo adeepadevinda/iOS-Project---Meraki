@@ -2,14 +2,15 @@ import SwiftUI
 import Firebase
 
 @main
-struct FirebaseTutorialApp: App {
+
+struct Meraki: App {
     init() {
         FirebaseApp.configure()
     }
     
     var body: some Scene {
         WindowGroup {
-            ProfileView()
+            SplashScreenView()
         }
     }
 }

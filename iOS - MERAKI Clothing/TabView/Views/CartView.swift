@@ -35,6 +35,7 @@ struct CartView: View {
             }
             
         }
+        .environmentObject(CartManager())
     }
 }
 

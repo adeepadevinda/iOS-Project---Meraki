@@ -25,18 +25,17 @@ struct HomeView: View {
                             .font(.title2)
                             .fontWeight(.medium)
                         
-                        Spacer()
+                          Spacer()
                         
                         NavigationLink(destination: {
                             ProductsView()
                         }, label: {
-                            
                             Image(systemName: "circle.grid.2x2.fill")
                                 .foregroundColor(Color("Primary"))
                         })
                     }
-                    .padding()
-                    
+                    .padding(.horizontal)
+                   
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing:10){
                             ForEach(productList, id: \.id){product in
@@ -58,6 +57,8 @@ struct HomeView: View {
         }
         .environmentObject(CartManager())
         .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
+        .navigationBarHidden(true)
     }
 }
 

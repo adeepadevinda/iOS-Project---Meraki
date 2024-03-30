@@ -13,7 +13,7 @@ struct SignInView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var retypePassword = ""
-    @State private var isSignInActive = false // Track the navigation state
+    @State private var isSignInActive = false
     
     var body: some View {
         
@@ -37,9 +37,8 @@ struct SignInView: View {
                         TextField("Name", text: $name)
                             .textFieldStyle(.plain)
                             .padding()
-                            
-
-                        
+                            .foregroundColor(.black)
+                
                         TextField("Email", text: $email)
                             .textFieldStyle(.plain)
                             .padding()
@@ -48,14 +47,14 @@ struct SignInView: View {
                         SecureField("Password", text: $password)
                             .textFieldStyle(.plain)
                             .padding()
+                            .foregroundColor(.black)
                         
                         SecureField("Re-type Password", text: $retypePassword)
-                            .textFieldStyle(.plain)
+                            .foregroundColor(.black)
                             .padding()
                         
                         Button(action: {
-                            // Action to perform when Sign In button is clicked
-                            isSignInActive = true // Activate the navigation
+                            isSignInActive = true
                         }) {
                             Text("Sign Up")
                                 .bold()
@@ -81,7 +80,7 @@ struct SignInView: View {
                         .padding(.bottom) // Add some bottom padding
                         
                         NavigationLink(
-                            destination: ContentView(), // Navigate to ContentView when Sign In button is clicked
+                            destination: ContentView(),
                             isActive: $isSignInActive, // Bind to isSignInActive state
                             label: { EmptyView() } // Use EmptyView for the label
                         )
