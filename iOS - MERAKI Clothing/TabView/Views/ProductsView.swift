@@ -15,7 +15,7 @@ struct ProductsView: View {
                         NavigationLink(destination: ProductDetailsView(product: product)) {
                             ProductCardView(product: product)
                         }
-                        .environmentObject(cartManager)
+//                        .environmentObject(cartManager)
                     }
                 }
                 .padding()
@@ -48,10 +48,11 @@ struct AppBarProduct: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: CartView().environmentObject(cartManager)) {
-                    cartButton(numberofProducts: cartManager.products.count)
-                        .padding(.horizontal)
-                }
+//                NavigationLink(destination: CartView()
+//                    .environmentObject(cartManager)) {
+//                    cartButton(numberofProducts: cartManager.products.count)
+//                        .padding(.horizontal)
+//                }
             }
         }
     }

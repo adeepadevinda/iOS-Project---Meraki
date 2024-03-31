@@ -34,11 +34,8 @@ struct ProductCardView: View {
                     Text("LKR \(product.price)")
                         .foregroundColor(.black)
                         .bold()
-                        .font(.title2)
-                    
-                    
+                        .font(.title2) 
                 }
-                
 //                Button{
 //                    cartManager.addtoCart(product: product)
 //                } label:{

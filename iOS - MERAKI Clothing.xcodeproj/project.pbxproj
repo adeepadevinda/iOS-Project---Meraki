@@ -29,8 +29,6 @@
 		829174742BB015B400954293 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174732BB015B400954293 /* PaymentButton.swift */; };
 		829174762BB0342200954293 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174752BB0342200954293 /* ProductDetailsView.swift */; };
 		829174782BB1B16F00954293 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174772BB1B16F00954293 /* ProductsView.swift */; };
-		8291747B2BB596B700954293 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8291747A2BB596B700954293 /* FirebaseAuth */; };
-		8291747D2BB596B700954293 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8291747C2BB596B700954293 /* FirebaseFirestore */; };
 		8291747F2BB597FF00954293 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8291747E2BB597FF00954293 /* GoogleService-Info.plist */; };
 		829174812BB5A67100954293 /* ProfileOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174802BB5A67100954293 /* ProfileOrders.swift */; };
 		829174832BB5A6C000954293 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829174822BB5A6C000954293 /* SignInView.swift */; };
@@ -70,14 +68,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8291747B2BB596B700954293 /* FirebaseAuth in Frameworks */,
-				8291747D2BB596B700954293 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8262B2CC2BB818DB00A66981 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
 		829174182B9F774900954293 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +100,13 @@
 		829174232B9F774900954293 /* iOS - MERAKI Clothing */ = {
 			isa = PBXGroup;
 			children = (
-				829174322BA0CC7F00954293 /* TabView */,
-				829174242B9F774900954293 /* iOS___MERAKI_ClothingApp.swift */,
-				829174492BA5360A00954293 /* Product.swift */,
-				8291744B2BA564A100954293 /* Components */,
 				829174282B9F774C00954293 /* Assets.xcassets */,
+				8291744B2BA564A100954293 /* Components */,
+				829174242B9F774900954293 /* iOS___MERAKI_ClothingApp.swift */,
+				8262B2CC2BB818DB00A66981 /* ModelView */,
 				8291742A2B9F774C00954293 /* Preview Content */,
+				829174492BA5360A00954293 /* Product.swift */,
+				829174322BA0CC7F00954293 /* TabView */,
 			);
 			path = "iOS - MERAKI Clothing";
 			sourceTree = "<group>";
@@ -118,12 +122,12 @@
 		829174322BA0CC7F00954293 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
+				829174562BA9C58000954293 /* Views */,
 				829174412BA0DD4A00954293 /* CartProductView.swift */,
 				829174732BB015B400954293 /* PaymentButton.swift */,
 				8291744E2BA6F76100954293 /* ProductCardView.swift */,
 				829174752BB0342200954293 /* ProductDetailsView.swift */,
 				829174542BA9C32A00954293 /* cartButton.swift */,
-				829174562BA9C58000954293 /* Views */,
 				829174452BA0FC0F00954293 /* Models */,
 			);
 			path = TabView;
@@ -183,8 +187,6 @@
 			);
 			name = "iOS - MERAKI Clothing";
 			packageProductDependencies = (
-				8291747A2BB596B700954293 /* FirebaseAuth */,
-				8291747C2BB596B700954293 /* FirebaseFirestore */,
 			);
 			productName = "iOS - MERAKI Clothing";
 			productReference = 829174212B9F774900954293 /* iOS - MERAKI Clothing.app */;
@@ -215,7 +217,6 @@
 			);
 			mainGroup = 829174182B9F774900954293;
 			packageReferences = (
-				829174792BB596B700954293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 829174222B9F774900954293 /* Products */;
 			projectDirPath = "";
@@ -464,30 +465,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		829174792BB596B700954293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8291747A2BB596B700954293 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 829174792BB596B700954293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		8291747C2BB596B700954293 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 829174792BB596B700954293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 829174192B9F774900954293 /* Project object */;
 }

@@ -1,10 +1,8 @@
 import SwiftUI
-import FirebaseAuth
 
 struct ProfileView: View {
     @State private var email = ""
     @State private var password = ""
-    @State private var isSignInActive = false
     @State private var isSignUpActive = false
     
     var body: some View {
@@ -65,22 +63,26 @@ struct ProfileView: View {
                         .foregroundColor(.black)
                         .padding(.bottom)
                     
-                    Button(action: {
-                        isSignInActive = true
-                    }) {
-                        Text("Sign In")
-                            .bold()
-                            .foregroundColor(.white)
-                            .frame(width: 200, height: 40)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(LinearGradient(colors: [.blue], startPoint: .top, endPoint: .bottomTrailing))
-                            )
+                    NavigationLink(destination: ContentView(), isActive: $isSignUpActive) {
+                        Button(action: {
+                            // Perform sign in action here
+                            // For demonstration, let's navigate to ContentView
+                            isSignUpActive = true
+                        }) {
+                            Text("Sign In")
+                                .bold()
+                                .foregroundColor(.white)
+                                .frame(width: 200, height: 40)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .fill(LinearGradient(colors: [.blue], startPoint: .top, endPoint: .bottomTrailing))
+                                )
+                        }
+                        .padding()
                     }
-                    .padding()
                     
                     Button(action: {
-                        isSignUpActive = true
+                        // Navigate to sign up view
                     }) {
                         Text("Don't have an account? Sign Up")
                             .underline()
@@ -88,18 +90,6 @@ struct ProfileView: View {
                 }
                 .padding()
             }
-            .background(
-                NavigationLink(destination: ContentView(), isActive: $isSignInActive) {
-                    EmptyView()
-                }
-                .hidden()
-            )
-            .background(
-                NavigationLink(destination: SignInView(), isActive: $isSignUpActive) {
-                    EmptyView()
-                }
-                .hidden()
-            )
         }
     }
 }
@@ -122,6 +112,7 @@ extension View {
         }
     }
 }
+
 
 //        func login
 //        Auth.auth().signIn(withEmail: email, password: password) { result, error in
