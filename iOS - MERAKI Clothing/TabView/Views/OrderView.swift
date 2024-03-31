@@ -9,11 +9,11 @@ import SwiftUI
 
 struct OrderView: View {
     let order1 = [
-        "Order Details",
-        "My Profile",
-        "Favorites",
-        "Settings",
-        "Sign Out",
+        "Order 01",
+        "Order 02",
+        "Order 03",
+        "Order 04",
+        "Order 05",
     ]
     var body: some View {
         NavigationStack {
@@ -22,20 +22,20 @@ struct OrderView: View {
                     Text(order1)
                 }
             }
-            .navigationTitle("Profile")
+            .navigationTitle("Orders")
         }
     }
     func ordernameView(for order1: String) -> some View {
         switch order1 {
-        case "Order Details":
+        case "Order 01":
             return AnyView(OrderView())
-        case "My Profile":
+        case "Order 02":
             return AnyView(ProfileView())
-        case "Favorites":
-            return AnyView(CartView())
-        case "Settings":
+        case "Order 03":
             return AnyView(SettingsView())
-        case "Sign Out":
+        case "Order 04":
+            return AnyView(SettingsView())
+        case "Order 05":
             return AnyView(ProfileView())
         default:
             return AnyView(EmptyView())

@@ -81,13 +81,13 @@ struct SignInView: View {
                         
                         NavigationLink(
                             destination: ContentView(),
-                            isActive: $isSignInActive, // Bind to isSignInActive state
-                            label: { EmptyView() } // Use EmptyView for the label
+                            isActive: $isSignInActive,
+                            label: { EmptyView() }
                         )
                         
                     }
                     .padding()
-                } // Add padding to the VStack
+                } 
             }
         }
     }

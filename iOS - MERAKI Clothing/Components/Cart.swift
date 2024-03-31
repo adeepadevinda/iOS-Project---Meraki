@@ -12,7 +12,7 @@ class CartManager : ObservableObject{
     
     @Published private(set) var total: Int = 0
     
-    func  addtoCart(product: Product){
+    func addtoCart(product: Product){
         products.append(product)
         total += product.price
     }

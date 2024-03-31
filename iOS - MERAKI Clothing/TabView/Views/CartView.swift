@@ -33,9 +33,7 @@ struct CartView: View {
                     Text("Cart is Empty")
                 }
             }
-            
         }
-        .environmentObject(CartManager())
     }
 }
 

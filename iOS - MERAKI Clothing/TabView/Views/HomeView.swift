@@ -113,4 +113,6 @@ struct AppBar: View {
        
         .environmentObject(CartManager())
     }
+    
 }
+

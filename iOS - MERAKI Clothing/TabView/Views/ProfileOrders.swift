@@ -11,7 +11,7 @@ struct ProfileOrders: View {
     let players = [
         "Order Details",
         "My Profile",
-        "Favorites",
+        "FavoritesX",
         "Settings",
         "Sign Out",
     ]
@@ -27,7 +27,6 @@ struct ProfileOrders: View {
         }
     }
     
-    // Function to determine destination view based on the selected player
     func destinationView(for player: String) -> some View {
         switch player {
         case "Order Details":
@@ -35,7 +34,7 @@ struct ProfileOrders: View {
         case "My Profile":
             return AnyView(ProfileView())
         case "Favorites":
-            return AnyView(HomeView())
+            return AnyView(SettingsView())
         case "Settings":
             return AnyView(SettingsView())
         case "Sign Out":
